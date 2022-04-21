@@ -82,9 +82,13 @@ public class Testing : MonoBehaviour
                     listItems[ID - 1].name = x + "_" + y;
                     if (ID - 1 >= 0 && ID - 1 <= 3) belts[ID - 1].SetXYID(x, y, ID);
                     if (ID - 1 >= 5 && ID - 1 <= 8) manipulators[ID - 1 - 5].SetXYID(x, y, ID);
+                    if(ID!=10)
                     Instantiate(listItems[ID - 1], grid.GetWorldPosition(x, y) + new Vector3(CS, CS) * .5f, 
                         Quaternion.Euler(0,0,(ID-1)*90));
-                    
+                    else
+                    Instantiate(listItems[ID - 1], grid.GetWorldPosition(x, y) + new Vector3(CS, CS) * .5f,
+                        Quaternion.Euler(0, 0, 0));
+
                 }
 
             }
@@ -95,6 +99,7 @@ public class Testing : MonoBehaviour
                 if (true)
                 {
                     listItems[ID - 1].name = x + "_" + y + "(Clone)";
+                    if(GameObject.Find(x + "_" + y + "(Clone)") !=null)
                     Destroy(GameObject.Find(listItems[ID - 1].name).gameObject);
                 }
 

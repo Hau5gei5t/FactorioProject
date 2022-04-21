@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: 0
   output: 0
-  X: 8
-  Y: 5
+  X: 0
+  Y: 0
   id: 7
   IDItem: 0
   item: {fileID: 0}
