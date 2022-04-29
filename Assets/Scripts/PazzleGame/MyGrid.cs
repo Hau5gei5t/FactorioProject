@@ -89,7 +89,7 @@ public class MyGrid
     {
         int x, y;
         GetXY(worldPosition, out x, out y);
-        if (gridArray[x, y] != value)
+        if (gridArray[x, y] == 0 || value == 0)
         {
             SetValue(x, y, value);
             ischanged = true;
