@@ -150,6 +150,6 @@ MonoBehaviour:
   isFull: 0
   testing: {fileID: 0}
   X: 6
-  Y: 2
+  Y: 4
   id: 2
   position: {x: 0, y: 0, z: 0}

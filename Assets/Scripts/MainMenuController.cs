@@ -13,14 +13,30 @@ public class MainMenuController : MonoBehaviour
     }
     public void GoToSelectLevels()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
     public void GoToGuide()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
     public void GoToBook()
     {
         SceneManager.LoadScene(2);
+    }
+    public void GoToLevel1()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void GoToLevel2()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void GoToLevel3()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
-
+using UnityEngine.SceneManagement;
 
 public class Testing : MonoBehaviour
 {
@@ -17,9 +17,48 @@ public class Testing : MonoBehaviour
     [SerializeField] int ID;
     [SerializeField] Belt[] belts;
     [SerializeField] Manipulator[] manipulators;
+    
     private void Start()
     {
         grid = new MyGrid(12, 9, 5f, new Vector3(-42f, -22.5f));
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1")) 
+        {
+            for (var i = 0; i < 5; i++)
+            {
+                grid.SetValue(i, 4, 1);
+                listItems[0].name = i + "_" + 4;
+                belts[0].SetXYID(i, 4, 1);
+                Instantiate(listItems[0], grid.GetWorldPosition(i, 4) + new Vector3(CS, CS) * .5f,
+                            Quaternion.Euler(0, 0, (0) * 90));
+            }
+            for (var i = 8; i < 11; i++)
+            {
+                grid.SetValue(i, 4, 1);
+                listItems[0].name = i + "_" + 4;
+                belts[0].SetXYID(i, 4, 1);
+                Instantiate(listItems[0], grid.GetWorldPosition(i, 4) + new Vector3(CS, CS) * .5f,
+                            Quaternion.Euler(0, 0, (0) * 90));
+            }
+        };
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
+        {
+            for (var i = 0; i < 5; i++)
+            {
+                grid.SetValue(i, 2, 1);
+                listItems[0].name = i + "_" + 2;
+                belts[0].SetXYID(i, 2, 1);
+                Instantiate(listItems[0], grid.GetWorldPosition(i, 2) + new Vector3(CS, CS) * .5f,
+                            Quaternion.Euler(0, 0, (0) * 90));
+            }
+            for (var i = 8; i < 11; i++)
+            {
+                grid.SetValue(i, 4, 1);
+                listItems[0].name = i + "_" + 4;
+                belts[0].SetXYID(i, 4, 1);
+                Instantiate(listItems[0], grid.GetWorldPosition(i, 4) + new Vector3(CS, CS) * .5f,
+                            Quaternion.Euler(0, 0, (0) * 90));
+            }
+        };
 
     }
     public void SetID(int value)
