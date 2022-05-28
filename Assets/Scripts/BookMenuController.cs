@@ -32,7 +32,6 @@ public class BookMenuController : MonoBehaviour
         switch (ID)
         {
             case 1:
-
                 page.SetActive(true);
                 break;
             default:

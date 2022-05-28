@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WinTrigger : MonoBehaviour
 {
+    [SerializeField] private GameObject popup;
     private ItemSettings item;
     private int count;
     [SerializeField] private int needCount;
@@ -13,12 +14,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (count == needCount)
         {
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
-                SceneManager.LoadScene(3);
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
-                SceneManager.LoadScene(4); 
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level3"))
-                SceneManager.LoadScene(0);
+            popup.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,5 +30,14 @@ public class WinTrigger : MonoBehaviour
                 Destroy(collision.gameObject);
             }
         }
+    }
+    public void NextLevel()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
+            SceneManager.LoadScene(3);
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level2"))
+            SceneManager.LoadScene(4);
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level3"))
+            SceneManager.LoadScene(0);
     }
 }

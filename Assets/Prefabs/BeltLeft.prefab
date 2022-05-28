@@ -149,7 +149,7 @@ MonoBehaviour:
   LastDirection: {x: 0, y: 0, z: 0}
   isFull: 0
   testing: {fileID: 0}
-  X: 6
-  Y: 5
+  X: 7
+  Y: 4
   id: 3
   position: {x: 0, y: 0, z: 0}

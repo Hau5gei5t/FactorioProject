@@ -23,22 +23,22 @@ public class Belt : MonoBehaviour
         {
             case 1:
                 if (X + 1 >= 12) break;
-                if (MyGrid.gridArray[X + 1, Y] != 0 ) direction = new Vector2(5, 0);
+                if (MyGrid.gridArray[X + 1, Y] != 0 && MyGrid.gridArray[X + 1, Y] != 11) direction = new Vector2(5, 0);
                 position = this.transform.position;
                 break;
             case 2:
                 if (Y + 1 >= 9) break;
-                if (MyGrid.gridArray[X, Y + 1] != 0 ) direction = new Vector2(0, 5);
+                if (MyGrid.gridArray[X, Y + 1] != 0 && MyGrid.gridArray[X, Y + 1] != 11) direction = new Vector2(0, 5);
                 position = this.transform.position;
                 break;
             case 3:
                 if (X == 0) break;
-                if (MyGrid.gridArray[X - 1, Y] != 0 ) direction = new Vector2(-5, 0);
+                if (MyGrid.gridArray[X - 1, Y] != 0 && MyGrid.gridArray[X - 1, Y] != 11) direction = new Vector2(-5, 0);
                 position = this.transform.position;
                 break;
             case 4:
                 if (Y == 0) break;
-                if (MyGrid.gridArray[X, Y - 1] != 0 ) direction = new Vector2(0, -5);
+                if (MyGrid.gridArray[X, Y - 1] != 0 && MyGrid.gridArray[X, Y - 1] != 11) direction = new Vector2(0, -5);
                 position = this.transform.position;
                 break;
         }
