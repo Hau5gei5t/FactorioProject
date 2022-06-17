@@ -33,6 +33,29 @@ public class BookMenuController : MonoBehaviour
         {
             case 1:
                 page.SetActive(true);
+                for (int i = 1; i < 5; i++)
+                {
+                    if (GameObject.Find("Page" + i) && ID!=i)
+                        GameObject.Find("Page" + i).SetActive(false);
+                }
+                break;
+            case 2:
+                page.SetActive(true);
+                for (int i = 1; i < 5; i++)
+                {
+                    if (GameObject.Find("Page" + i) && ID != i)
+                        GameObject.Find("Page" + i).SetActive(false);
+                }
+                //page.SetActive(false);
+                break;
+            case 3:
+                page.SetActive(true);
+                for (int i = 1; i < 5; i++)
+                {
+                    if (GameObject.Find("Page" + i) && ID != i)
+                        GameObject.Find("Page" + i).SetActive(false);
+                }
+                //page.SetActive(false);
                 break;
             default:
                 break;
